@@ -1,0 +1,97 @@
+<!-- <p>descansomedico works!</p> -->
+<body id="page-top">
+    <div class="container" style="padding-top: 120px;">
+        <h3>
+            Registar Descanso Médico
+        </h3>
+        <p>
+            Registre su descanso médico
+        </p>
+        <div class="row">
+            <div class="col-6">
+                <form [formGroup]="descansomedicoForm" method="post" autocomplete="off">
+                    <div class="form-group">
+                        <select class="form-control form-control-sm" style="color: rgb(0,0,0);">
+                            <option value="1" selected="">Tipo Descanso</option>
+                            <option value="2">Enfermedad</option>
+                            <option value="3">Accidente en el trabajo</option>
+                            <option value="4">Covid</option>
+                        </select>
+                    </div>
+            
+                    <div formGroupName="descansomedico">
+                        <div class="form-group" text="hola">
+                            <input type="date" formControlName="fechaini" class="form-control" placeholder="Ingrese Fecha Inicio">
+                        </div>
+                        <div class="form-group">
+                            <input type="date" formControlName="fechafin" class="form-control" placeholder="Ingrese Fecha Fin">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" formControlName="dias" class="form-control" >
+                    </div>   
+                    <div class="form-group">
+                        <textarea id="" name="" formControlName="Descripción del descanso" rows="10" cols="50" class="form-control" ></textarea>
+                    </div>   
+                    <div class="form-group">
+                        <a class="btn btn-light disabled border-dark" role="button" href="#" style="font-family: Montserrat, sans-serif;font-weight: normal;margin: 15px;margin-right: 0;margin-left: 0;">Subir Documentación PDF</a>
+                    </div>     
+                    <div class="form-group">
+                        <button (click)="__onSubmit()" class="btn btn-primary">Enviar</button>
+                    </div>
+                    <!-- <p>
+                        Datos del formulario: {{ contactusForm.value | json }}
+                    </p> -->
+                    <!-- <p>
+                        Validacion de Formulario: {{ contactusForm.valid }}
+                    </p> -->
+                </form>
+            </div>
+            
+        </div>
+        <div class="table-responsive table-striped" style="border-radius: 10px;">
+                            <table class="table" style="margin:0px;">
+                                <thead style="background-color: rgba(52,58,64,0.75);color: rgb(255,255,255);">
+                                    <tr>
+                                        <th class="align-middle">Fecha Inicio</th>
+                                        <th class="align-middle">Fecha Fin</th>
+                                        <th class="align-middle"><strong>Días</strong><br></th>
+                                        <th class="align-middle" style="text-align: center;"></th>
+                                        <th class="align-middle" style="text-align: center;"></th>
+                                        <th class="align-middle" style="text-align: center;"></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="align-middle">01/04/2022</td>
+                                        <td class="align-middle">07/04/2022</td>
+                                        <td class="align-middle">7<br></td>
+                                        <td class="text-center"><a href="#" class="btn btn-outline-dark"><i class="fa fa-file-text-o"></i></a></td>
+                                        <td class="text-center"><a href="#" class="btn btn-outline-dark"><i class="fa fa-pencil"></i></a></td>
+                                        <td class="text-center"><a href="#" class="btn btn-outline-danger"><i class="fa fa-remove"></i></a></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="align-middle">01/03/2022</td>
+                                        <td class="align-middle">04/03/2022</td>
+                                        <td class="align-middle">4<br></td>
+                                        <td class="text-center"><a href="#" class="btn btn-outline-dark"><i class="fa fa-file-text-o"></i></a></td>
+                                        <td class="text-center"><a href="#" class="btn btn-outline-dark"><i class="fa fa-pencil"></i></a></td>
+                                        <td class="text-center"><a href="#" class="btn btn-outline-danger"><i class="fa fa-remove"></i></a></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="align-middle">01/02/2022</td>
+                                        <td class="align-middle">10/02/2022</td>
+                                        <td class="align-middle">10<br></td>
+                                        <td class="text-center"><a href="#" class="btn btn-outline-dark"><i class="fa fa-file-text-o"></i></a></td>
+                                        <td class="text-center"><a href="#" class="btn btn-outline-dark"><i class="fa fa-pencil"></i></a></td>
+                                        <td class="text-center"><a href="#" class="btn btn-outline-danger"><i class="fa fa-remove"></i></a></td>
+                                    </tr>
+                                
+                                </tbody>
+                            </table>
+        </div>
+    </div>
+    <div>
+        
+    </div>
+    </body>
