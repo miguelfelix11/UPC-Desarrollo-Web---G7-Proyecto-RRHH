@@ -104,3 +104,24 @@ AS
            ,GETDATE()
            )
 GO
+--Create de SP de Listar Vacaciones
+CREATE PROC [dbo].[usp_Listar_Vacaciones_X_Colaborador]
+(
+	@IDCOLABORADOR VARCHAR(20)
+)
+AS
+	SELECT IDCOLABORADOR
+      ,V.FECHAALTA
+      ,V.PERIODO
+      ,V.FECHAINICIO
+      ,V.FECHAFIN
+      ,V.DIAS
+	  ,V.ESTADO
+      ,V.USUARIOCREA
+      ,V.USUARIOMODIFICA
+      ,V.FECHACREA
+      ,V.FECHAMODIFICA
+  FROM TM_VACACIONES V
+  WHERE V.IDCOLABORADOR=@IDCOLABORADOR
+  AND V.ESTADO='1'
+  GO
