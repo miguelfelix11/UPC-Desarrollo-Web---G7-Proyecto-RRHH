@@ -71,3 +71,36 @@ AS
 	WHERE	P.IDCOLABORADOR = @IDCOLABORADOR
  
 GO
+--Create de SP de Insertar Vacaciones
+ CREATE PROC [dbo].[usp_InsertarVacaciones]
+(
+	@IDCOLABORADOR VARCHAR(20),
+	@FECHAINICIO DATE,
+	@FECHAFIN DATE,
+	@DIAS INT,
+	@USUARIOCREA INT
+)
+AS
+	INSERT INTO [dbo].[TM_VACACIONES]
+           (IDCOLABORADOR
+           ,FECHAALTA
+           ,PERIODO
+           ,FECHAINICIO
+           ,FECHAFIN
+           ,DIAS
+		   ,ESTADO
+           ,USUARIOCREA
+           ,FECHACREA
+           )
+     VALUES
+           (@IDCOLABORADOR
+           ,'20220101'
+           ,2022
+           ,@FECHAINICIO
+           ,@FECHAFIN
+           ,@DIAS
+		   ,'1'
+           ,@USUARIOCREA
+           ,GETDATE()
+           )
+GO
