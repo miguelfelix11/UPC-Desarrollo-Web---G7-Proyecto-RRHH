@@ -38,7 +38,7 @@ CREATE TABLE DEPENDIENTES
 )
 GO
 
---Tabla de Historico de Periodos del Colaborador
+--Tabla de Historico de Periodos del Colaborador 
 CREATE TABLE TM_COLABORADOR
 (
 	IDCOLABORADOR			VARCHAR(20) ,
