@@ -51,7 +51,7 @@ AS
 GO
 -------------------------------------------
 
-DROP PROC USP_ObtenerTMDescansoMedico;
+--DROP PROC USP_ObtenerTMDescansoMedico;
 CREATE PROC USP_ObtenerTMDescansoMedico
 (
 	@IDCOLABORADOR VARCHAR(20)
