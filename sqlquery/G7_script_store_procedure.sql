@@ -24,7 +24,7 @@ AS
 	WHERE	P.IDCOLABORADOR = @IDCOLABORADOR
   AND P.ACTIVO='1'
 GO
-
+--------------------------------------------
 -- DROP PROC USP_ObtenerDependientes;
 CREATE PROC USP_ObtenerDependientes
 (
@@ -49,3 +49,4 @@ AS
 	WHERE	P.IDCOLABORADOR = @IDCOLABORADOR
   AND P.ACTIVO='1'
 GO
+-------------------------------------------
