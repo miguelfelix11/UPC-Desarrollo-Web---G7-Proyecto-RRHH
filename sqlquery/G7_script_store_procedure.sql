@@ -50,3 +50,24 @@ AS
   AND P.ACTIVO='1'
 GO
 -------------------------------------------
+
+DROP PROC USP_ObtenerTMDescansoMedico;
+CREATE PROC USP_ObtenerTMDescansoMedico
+(
+	@IDCOLABORADOR VARCHAR(20)
+)
+AS
+	SELECT
+          P.IDCOLABORADOR,
+          P.ORDINAL,
+			    P.FECHA_ATENCION,
+			    P.MOTIVO_DESC,
+			    P.DETALLE_MOTIVO_DESC,
+			    P.FECHA_INICIO_DESC,
+			    P.FECHA_FIN_DESC,
+          P.CONSTANCIA_DESC_PDF,
+                   
+	FROM	DEPENDIENTES P
+	WHERE	P.IDCOLABORADOR = @IDCOLABORADOR
+  AND P.ACTIVO='1'
+GO
